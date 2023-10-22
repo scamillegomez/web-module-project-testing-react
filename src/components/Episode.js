@@ -8,11 +8,11 @@ const Episode = (props) => {
   console.log("episode: ", episode);
 
   return (
-    <div className="episode" key={id}>
-      <img className="episode-image" src={imgsrc} alt={imgsrc} />
+    <div className="episode" data-testid="episode-list-item" key={id} >
+      <img className="episode-image" src={imgsrc} alt={imgsrc} data-testid="episode-image"/>
       <div className="episode-info">
         <p className="episode-number">Season {season}, Episode {number}</p>
-        <h3>{name}</h3>
+        <h3 data-testid="episode">{name}</h3>
         <p>{summary}</p>
         <div className="flex-spacer" />
         <p className="episode-runtime">{runtime} minutes</p>
